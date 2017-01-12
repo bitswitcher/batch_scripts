@@ -62,6 +62,16 @@ echo %STR2:foo=baz%
 rem foo
 echo %STR2:bar=%
 
+rem compare substitute string
+if not "!STR2:foo=!" == "!STR2!" (
+  echo match foo
+)
+if not "!STR2:bak=!" == "!STR2!" (
+  echo match bak
+) else (
+  echo mismatch bak
+)
+
 rem random
 echo %RANDOM%
 
