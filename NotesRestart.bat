@@ -23,4 +23,8 @@ if not errorlevel 1  (
 )
 
 rem start Lotus Notes/Domino process
-start " " "C:\Program Files (x86)\lotus\notes\notes.exe"
+if exist "%ProgramFiles(x86)%" (
+  start " " "C:\Program Files (x86)\lotus\notes\notes.exe"
+) else (
+  start " " "C:\Program Files\lotus\notes\notes.exe"
+)
