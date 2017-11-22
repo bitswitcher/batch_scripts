@@ -7,7 +7,7 @@ rem get filename with extention
 echo %~nx0
 
 rem get filename without extention
-echo %~nx0
+echo %~n0
 
 rem get dirname without filename
 echo %~dp0
