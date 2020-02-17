@@ -3,6 +3,9 @@ setlocal
 setlocal ENABLEEXTENSIONS
 setlocal ENABLEDELAYEDEXPANSION
 
+rem set current directory to batch file's location and finally resotre current directory by using popd
+pushd "%~dp0"
+
 rem get filename with extention
 echo %~nx0
 
@@ -108,6 +111,8 @@ for /l %%j in (0,0,0) do (
     exit /b %ERRORLEVEL%
   )
 )
+
+popd
 
 if not "%1" == "nowait" pause
 
