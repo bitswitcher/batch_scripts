@@ -1,5 +1,9 @@
 @echo off
 
+rem change code page
+rem  932(shift_jis) / 51932 (euc-jp) / 65001(utf-8)
+chcp 932
+
 rem alias
 doskey pwd=cd
 doskey p=cd
@@ -15,6 +19,8 @@ doskey rm=del $*
 doskey clear=cls
 doskey less=more /e $*
 doskey lv=more /e $*
+doskey ifc=ipconfig
+doskey pingl=ping 192.168.$1
 
 rem alias (cd)
 set PREV_PWD_FILE=%TEMP%\pwd.prev
